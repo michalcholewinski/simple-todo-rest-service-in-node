@@ -1,15 +1,17 @@
 'use strict';
 
 import author from '../author/author.routes';
+import todo from '../todo/todo.routes';
 
 class Routes {
-    constructor(){}
+    constructor() {
+    }
 
-    init(app){
+    init(app) {
         author(app);
-
-        app.use(function(err, req, res, next){
-           res.status(500).send(err.stack);
+        todo(app);
+        app.use(function (err, req, res, next) {
+            res.status(500).send(err.stack);
             next();
         });
     }
