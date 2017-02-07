@@ -7,6 +7,7 @@ import methodOverride from 'method-override';
 import helmet from 'helmet';
 import config from './config';
 import routes from './routes';
+import path from 'path';
 
 class Express {
     constructor() {
@@ -17,6 +18,7 @@ class Express {
         this.app.use(bodyParser.urlencoded({extended: true}));
         this.app.use(bodyParser.json());
         this.app.use(methodOverride());
+        this.app.use(express.static('public'));
     }
 
     initHelmetHeaders() {
@@ -67,6 +69,7 @@ class Express {
         routes.init(this.app);
         this.initErrorRoutes();
         this.initDB();
+
 
         return this.app;
     }
