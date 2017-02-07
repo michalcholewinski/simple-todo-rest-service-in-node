@@ -1,0 +1,52 @@
+{
+  "name": "simple-todo-rest-service-in-node",
+  "version": "1.0.0",
+  "description": "Server in node.js with Express.js and Mongoose for simple TODO App",
+  "main": "server.js",
+  "engines": {
+    "npm": ">=7"
+  },
+  "scripts": {
+    "start": "node src/debug.js",
+    "prod": "node ./dist/server",
+    "babel": "./node_modules/.bin/babel 'src' --out-dir dist --source-maps",
+    "dev": "nodemon ./src/debug.js -L --watch 'src/**/*' --ext 'js'",
+    "debug": "NODE_PORT=3001 iron-node src/debug.js",
+    "lint": "jshint src/**/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michalcholewinski/simple-todo-rest-service-in-node.git"
+  },
+  "keywords": [
+    "nodejs",
+    "express.js",
+    "es6",
+    "mongoose"
+  ],
+  "author": {
+    "name": "Michal Cholewinski",
+    "email": "cholewinski.michal@gmail.com"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michalcholewinski/simple-todo-rest-service-in-node/issues"
+  },
+  "homepage": "https://github.com/michalcholewinski/simple-todo-rest-service-in-node#readme",
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "cors": "^2.8.1",
+    "dotenv": "^4.0.0",
+    "express": "^4.14.1",
+    "helmet": "^3.4.0",
+    "method-override": "^2.3.7",
+    "mongoose": "^4.8.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-preset-es2015-node": "^6.1.1",
+    "iron-node": "^3.0.17",
+    "jshint": "^2.9.4",
+    "nodemon": "^1.11.0"
+  }
+}
