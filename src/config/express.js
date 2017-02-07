@@ -7,7 +7,6 @@ import methodOverride from 'method-override';
 import helmet from 'helmet';
 import config from './config';
 import routes from './routes';
-import path from 'path';
 
 class Express {
     constructor() {
